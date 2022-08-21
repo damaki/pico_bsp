@@ -16,5 +16,8 @@ rp2040_hal = "^2.0"
 [configuration.values]
 rp2040_hal.Flash_Chip = "w25qxx"
 
+[configuration.variables]
+Runtime_Kind = {type = "Enum",  values = ["zfp", "tasking"], default = "tasking"}
+
 [[pins]]
-rp2040_hal = { url='https://github.com/JeremyGrosser/rp2040_hal' }
+rp2040_hal = { url='https://github.com/damaki/rp2040_hal', branch='refactor-interrupts' }
